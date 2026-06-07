@@ -1,2 +1,63 @@
 {% extends 'base.html' %}
-{}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm Shreya Jain</h1>
+
+        <h3>Machine Learning Enthusiast | Django Developer</h3>
+
+        <p>
+            Building intelligent AI applications and modern web solutions
+            using Machine Learning, Python, and Django.
+        </p>
+
+        <a href="{% url 'contact' %}" class="btn">
+            Contact Me
+        </a>
+    </div>
+</section>
+
+<section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-list">
+
+        <div class="project-card">
+            <img src="{% static 'images/moviie.png' %}" alt="Movie Recommendation System">
+
+            <h3>Movie Recommendation System</h3>
+
+            <p>
+                A machine learning-based system that provides personalized
+                movie recommendations based on user preferences and viewing history.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="{% static 'images/inter.png' %}" alt="Mock AI Interviewer">
+
+            <h3>Mock AI Interviewer</h3>
+
+            <p>
+                A conversational AI that simulates job interviews and provides
+                feedback to users.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="{% static 'images/real-fake.png' %}" alt="Real or Fake Image Detector">
+
+            <h3>Real or Fake Image Detector</h3>
+
+            <p>
+                A machine learning model that classifies images as real or fake
+                based on image characteristics.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
