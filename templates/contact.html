@@ -1,36 +1,44 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<section class="contact">
-    <div class="container">
-        <h2>Contact Me</h2>
+{% block title %}Contact — Shreya Jain{% endblock %}
 
-        <form method="post">
+{% block content %}
+
+<section class="page-section contact">
+    <div class="section-inner narrow">
+        <p class="section-label">// contact</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-desc">Have a project in mind or want to collaborate? Send me a message and I'll get back within 24 hours.</p>
+
+        {% if messages %}
+        <div class="alert alert-success">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form class="contact-form" method="post">
             {% csrf_token %}
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-            >
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required>
+            </div>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-            >
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="rahul@example.com" required>
+            </div>
 
-            <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="6"
-                required
-            ></textarea>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+            </div>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
         </form>
     </div>
 </section>
+
 {% endblock %}

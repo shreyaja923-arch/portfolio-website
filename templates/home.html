@@ -1,62 +1,88 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}Shreya Jain — ML & Django Developer{% endblock %}
+
 {% block content %}
+
 <section class="hero">
-    <div class="hero-content">
-        <h1>Hi, I'm Shreya Jain</h1>
-
-        <h3>Machine Learning Enthusiast | Django Developer</h3>
-
-        <p>
-            Building intelligent AI applications and modern web solutions
-            using Machine Learning, Python, and Django.
+    <div class="hero-inner">
+        <p class="hero-eyebrow"><span class="dot"></span> Available for opportunities</p>
+        <h1 class="hero-title">
+            Hi, I'm <span class="accent">Shreya Jain</span><span class="blink-cursor">|</span>
+        </h1>
+        <h2 class="hero-subtitle">Machine Learning Engineer &amp; Django Developer</h2>
+        <p class="hero-desc">
+            I build intelligent applications that sit at the intersection of
+            AI and the web — from recommendation systems to conversational agents.
         </p>
-
-        <a href="{% url 'contact' %}" class="btn">
-            Contact Me
-        </a>
+        <div class="hero-actions">
+            <a href="{% url 'contact' %}" class="btn btn-primary">Get in touch</a>
+            <a href="{% url 'about' %}" class="btn btn-ghost">About me →</a>
+        </div>
+        <div class="hero-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">ML / AI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">YOLO</span>
+        </div>
     </div>
 </section>
 
 <section class="projects">
-    <h2>My Projects</h2>
+    <div class="section-inner">
+        <p class="section-label">// projects</p>
+        <h2 class="section-title">Things I've Built</h2>
 
-    <div class="project-list">
+        <div class="project-grid">
 
-        <div class="project-card">
-            <img src="{% static 'images/moviie.png' %}" alt="Movie Recommendation System">
+            <article class="project-card">
+                <div class="project-meta">
+                    <span class="project-num">01</span>
+                    <span class="project-badge">Machine Learning</span>
+                </div>
+                <img src="{% static 'images/moviie.png' %}" alt="Movie Recommendation System" class="project-img">
+                <h3>Movie Recommendation System</h3>
+                <p>Personalized recommendations using collaborative filtering on viewing history and user preferences. Built with Python, scikit-learn, and a Django REST backend.</p>
+                <div class="project-tags">
+                    <span class="tag-sm">Python</span>
+                    <span class="tag-sm">scikit-learn</span>
+                    <span class="tag-sm">Django</span>
+                </div>
+            </article>
 
-            <h3>Movie Recommendation System</h3>
+            <article class="project-card">
+                <div class="project-meta">
+                    <span class="project-num">02</span>
+                    <span class="project-badge">Conversational AI</span>
+                </div>
+                <img src="{% static 'images/inter.png' %}" alt="Mock AI Interviewer" class="project-img">
+                <h3>Mock AI Interviewer</h3>
+                <p>An NLP-powered interview simulator that adapts questions to your role and gives structured feedback on answers in real time.</p>
+                <div class="project-tags">
+                    <span class="tag-sm">NLP</span>
+                    <span class="tag-sm">Python</span>
+                    <span class="tag-sm">Django</span>
+                </div>
+            </article>
 
-            <p>
-                A machine learning-based system that provides personalized
-                movie recommendations based on user preferences and viewing history.
-            </p>
+            <article class="project-card">
+                <div class="project-meta">
+                    <span class="project-num">03</span>
+                    <span class="project-badge">Computer Vision</span>
+                </div>
+                <img src="{% static 'images/real-fake.png' %}" alt="Real or Fake Image Detector" class="project-img">
+                <h3>Real or Fake Image Detector</h3>
+                <p>A CNN-based classifier that detects AI-generated or manipulated images using texture and frequency-domain analysis.</p>
+                <div class="project-tags">
+                    <span class="tag-sm">CNN</span>
+                    <span class="tag-sm">YOLO</span>
+                    <span class="tag-sm">OpenCV</span>
+                </div>
+            </article>
+
         </div>
-
-        <div class="project-card">
-            <img src="{% static 'images/inter.png' %}" alt="Mock AI Interviewer">
-
-            <h3>Mock AI Interviewer</h3>
-
-            <p>
-                A conversational AI that simulates job interviews and provides
-                feedback to users.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <img src="{% static 'images/real-fake.png' %}" alt="Real or Fake Image Detector">
-
-            <h3>Real or Fake Image Detector</h3>
-
-            <p>
-                A machine learning model that classifies images as real or fake
-                based on image characteristics.
-            </p>
-        </div>
-
     </div>
 </section>
 
