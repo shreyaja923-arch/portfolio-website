@@ -6,38 +6,72 @@
 {% block content %}
 
 <section class="hero">
-    <div class="hero-inner">
-        <p class="hero-eyebrow"><span class="dot"></span> Available for opportunities</p>
-        <h1 class="hero-title">
-            Hi, I'm <span class="accent">Shreya Jain</span><span class="blink-cursor">|</span>
-        </h1>
-        <h2 class="hero-subtitle">Machine Learning Engineer &amp; Django Developer</h2>
-        <p class="hero-desc">
-            I build intelligent applications that sit at the intersection of
-            AI and the web — from recommendation systems to conversational agents.
-        </p>
-        <div class="hero-actions">
-            <a href="{% url 'contact' %}" class="btn btn-primary">Get in touch</a>
-            <a href="{% url 'about' %}" class="btn btn-ghost">About me →</a>
+    <div class="hero-inner-grid">
+        <div class="hero-content">
+            <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="100">
+                <span class="dot"></span> Available for opportunities
+            </p>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                Hi, I'm<br><span class="accent">Shreya Jain.</span><br>Building AI-powered<br>web experiences.
+            </h1>
+            <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+                Machine Learning Engineer &amp; Django Developer
+            </h2>
+            <p class="hero-desc" data-aos="fade-up" data-aos-delay="400">
+                I build intelligent applications that sit at the intersection of
+                AI and the web — from recommendation systems to conversational agents.
+            </p>
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                <a href="{% url 'contact' %}" class="btn btn-primary">Get in touch</a>
+                <a href="{% url 'about' %}" class="btn btn-ghost">About me →</a>
+                <a href="{% url 'resume' %}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">View Resume 📄</a>
+                
+                <div class="hero-socials">
+                    <a href="https://github.com/shreyaja923-arch" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shreya-jain-694287343/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://leetcode.com/u/SHREYA_189/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LeetCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stack" data-aos="fade-up" data-aos-delay="600">
+                <span class="tag">🐍 Python</span>
+                <span class="tag">🌐 Django</span>
+                <span class="tag">🧠 ML / AI</span>
+                <span class="tag">📊 SQL</span>
+                <span class="tag">🎯 YOLO</span>
+            </div>
         </div>
-        <div class="hero-stack">
-            <span class="tag">Python</span>
-            <span class="tag">Django</span>
-            <span class="tag">ML / AI</span>
-            <span class="tag">SQL</span>
-            <span class="tag">YOLO</span>
+        <div class="hero-image-wrapper" data-aos="zoom-in" data-aos-delay="400">
+            <div class="hero-image-glow"></div>
+            <div class="hero-image-container">
+                <img src="{% static 'images/shreya.png' %}" alt="Shreya Jain" class="hero-photo">
+            </div>
         </div>
     </div>
 </section>
 
 <section class="projects">
     <div class="section-inner">
-        <p class="section-label">// projects</p>
-        <h2 class="section-title">Things I've Built</h2>
+        <p class="section-label" data-aos="fade-up">// projects</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Things I've Built</h2>
 
         <div class="project-grid">
 
-            <article class="project-card">
+            <article class="project-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-meta">
                     <span class="project-num">01</span>
                     <span class="project-badge">Machine Learning</span>
@@ -50,9 +84,13 @@
                     <span class="tag-sm">scikit-learn</span>
                     <span class="tag-sm">Django</span>
                 </div>
+                <div class="project-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Explore App</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">GitHub Repo →</a>
+                </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-meta">
                     <span class="project-num">02</span>
                     <span class="project-badge">Conversational AI</span>
@@ -65,9 +103,13 @@
                     <span class="tag-sm">Python</span>
                     <span class="tag-sm">Django</span>
                 </div>
+                <div class="project-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Launch AI</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">GitHub Repo →</a>
+                </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-meta">
                     <span class="project-num">03</span>
                     <span class="project-badge">Computer Vision</span>
@@ -79,6 +121,30 @@
                     <span class="tag-sm">CNN</span>
                     <span class="tag-sm">YOLO</span>
                     <span class="tag-sm">OpenCV</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Detect Image</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">GitHub Repo →</a>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-meta">
+                    <span class="project-num">04</span>
+                    <span class="project-badge">Full-Stack ERP</span>
+                </div>
+                <img src="{% static 'images/greencore.png' %}" alt="GreenCore ERP" class="project-img">
+                <h3>GreenCore: Factory ERP System</h3>
+                <p>An enterprise factory management ERP for sustainable industrial paper manufacturing. Features order dispatching, automatic quote generation, inventory controls, and resource analytics.</p>
+                <div class="project-tags">
+                    <span class="tag-sm">Django</span>
+                    <span class="tag-sm">PostgreSQL</span>
+                    <span class="tag-sm">Python</span>
+                    <span class="tag-sm">Bootstrap</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://paper-factory-project.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+                    <a href="https://github.com/shreyaja923-arch/Paper-Factory-project" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">GitHub Repo →</a>
                 </div>
             </article>
 

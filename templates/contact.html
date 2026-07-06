@@ -1,43 +1,92 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Contact — Shreya Jain{% endblock %}
 
 {% block content %}
 
 <section class="page-section contact">
-    <div class="section-inner narrow">
-        <p class="section-label">// contact</p>
-        <h2 class="section-title">Let's Work Together</h2>
-        <p class="section-desc">Have a project in mind or want to collaborate? Send me a message and I'll get back within 24 hours.</p>
+    <div class="section-inner">
+        <p class="section-label" data-aos="fade-up">// contact</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Let's Build Something Amazing</h2>
 
-        {% if messages %}
-        <div class="alert alert-success">
-            {% for message in messages %}
-                {{ message }}
-            {% endfor %}
+        <div class="contact-grid">
+            <!-- Left Side: Social & Contact Info -->
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                <p class="contact-pitch">
+                    Have an internship opportunity, a project idea, or just want to chat about AI integrations and Django? Feel free to reach out. I'm always open to new connections and will get back to you within 24 hours!
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:shreyaja923@gmail.com" class="contact-detail-card">
+                        <div class="card-icon">✉️</div>
+                        <div class="card-content">
+                            <span class="card-title">Email Me</span>
+                            <span class="card-value">shreyaja923@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shreya-jain-694287343/" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
+                        <div class="card-icon">🔗</div>
+                        <div class="card-content">
+                            <span class="card-title">LinkedIn</span>
+                            <span class="card-value">linkedin.com/in/shreya-jain-694287343</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/shreyaja923-arch" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
+                        <div class="card-icon">🐙</div>
+                        <div class="card-content">
+                            <span class="card-title">GitHub</span>
+                            <span class="card-value">github.com/shreyaja923-arch</span>
+                        </div>
+                    </a>
+                    <a href="tel:9520910904" class="contact-detail-card">
+                        <div class="card-icon">📞</div>
+                        <div class="card-content">
+                            <span class="card-title">Call Me</span>
+                            <span class="card-value">+91 9520910904</span>
+                        </div>
+                    </a>
+                    <div class="contact-detail-card static">
+                        <div class="card-icon">📍</div>
+                        <div class="card-content">
+                            <span class="card-title">Location</span>
+                            <span class="card-value">Ghaziabad, Uttar Pradesh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="contact-form-container" data-aos="fade-left" data-aos-delay="300">
+                {% if messages %}
+                <div class="alert alert-success">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <form class="contact-form" method="post">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="rahul@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+                </form>
+            </div>
         </div>
-        {% endif %}
-
-        <form class="contact-form" method="post">
-            {% csrf_token %}
-
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="rahul@example.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
-        </form>
     </div>
 </section>
 

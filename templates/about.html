@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}About — Shreya Jain{% endblock %}
 
@@ -6,57 +7,137 @@
 
 <section class="page-section about">
     <div class="section-inner">
-        <p class="section-label">// about me</p>
-        <h2 class="section-title">Building at the edge of AI &amp; web.</h2>
+        <p class="section-label" data-aos="fade-up">// about me</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Building at the edge of AI &amp; web.</h2>
 
         <div class="about-grid">
-            <div class="about-bio">
-                <p>
-                    I'm a Computer Science student with a deep interest in building
-                    intelligent systems that solve real problems. Whether it's a
-                    recommendation engine, a computer vision pipeline, or a Django
-                    web app — I care about making things that actually work well.
-                </p>
-                <p>
-                    Outside of projects, I spend time on Data Structures &amp; Algorithms
-                    and exploring how large language models can be integrated into
-                    practical web applications.
-                </p>
-                <p>
-                    My goal: grow into a full-stack AI engineer who can take an idea
-                    from research prototype to shipped product.
-                </p>
-                <a href="{% url 'contact' %}" class="btn btn-primary" style="margin-top: 1.5rem; display:inline-block;">Hire me →</a>
+            <!-- Left Side: Profile & Stats -->
+            <div class="about-left" data-aos="fade-right" data-aos-delay="200">
+                <div class="profile-card-wrapper">
+                    <div class="about-image-glow"></div>
+                    <div class="about-image-container">
+                        <img src="{% static 'images/shreya.png' %}" alt="Shreya Jain" class="about-photo">
+                    </div>
+                </div>
+
+                <!-- Statistics Panel -->
+                <div class="stats-panel">
+                    <div class="stat-card">
+                        <span class="stat-num">20+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">200+</span>
+                        <span class="stat-label">DSA Solved</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">AI Applications</span>
+                    </div>
+                    <div class="stat-card highlight">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Passion</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="skills-panel">
-                <div class="skill-group">
-                    <p class="skill-category">Languages</p>
-                    <div class="skill-list">
-                        <span class="tag">Python</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">HTML/CSS</span>
+            <!-- Right Side: Bio, Timeline & Skills -->
+            <div class="about-right" data-aos="fade-left" data-aos-delay="300">
+                <div class="about-bio">
+                    <p>
+                        I'm a Computer Science student with a deep interest in building
+                        intelligent systems that solve real-world problems. Whether it's a
+                        collaborative recommendation engine, a computer vision pipeline, or a Django
+                        web application — I care about making things that actually work well.
+                    </p>
+                    <p>
+                        Outside of projects, I spend a lot of time solving Data Structures &amp; Algorithms
+                        challenges, exploring how large language models can be integrated into
+                        practical web applications, and refining my front-end aesthetics.
+                    </p>
+                    <p>
+                        My ultimate goal: grow into a full-stack AI engineer who can take an idea
+                        from research prototype to a fully shipped, production-ready product.
+                    </p>
+                </div>
+
+                <!-- Skills Sub-sections -->
+                <div class="skills-panel-compact">
+                    <div class="skill-group-mini">
+                        <p class="skill-category">Languages</p>
+                        <div class="skill-list">
+                            <span class="tag">💻 C++</span>
+                            <span class="tag">🐍 Python</span>
+                            <span class="tag">⚙️ C</span>
+                            <span class="tag">🌐 HTML/CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group-mini">
+                        <p class="skill-category">Frameworks &amp; Tools</p>
+                        <div class="skill-list">
+                            <span class="tag">⚙️ Django</span>
+                            <span class="tag">🐙 Git</span>
+                            <span class="tag">🐙 GitHub</span>
+                            <span class="tag">💻 VS Code</span>
+                            <span class="tag">☁️ Google Colab</span>
+                        </div>
+                    </div>
+                    <div class="skill-group-mini">
+                        <p class="skill-category">Libraries</p>
+                        <div class="skill-list">
+                            <span class="tag">📊 NumPy</span>
+                            <span class="tag">📊 Pandas</span>
+                            <span class="tag">👁️ OpenCV</span>
+                            <span class="tag">📈 Matplotlib</span>
+                            <span class="tag">🧠 scikit-learn</span>
+                            <span class="tag">🎯 YOLO</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-group">
-                    <p class="skill-category">Frameworks &amp; Tools</p>
-                    <div class="skill-list">
-                        <span class="tag">Django</span>
-                        <span class="tag">scikit-learn</span>
-                        <span class="tag">YOLO</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Git</span>
+
+                <!-- Timeline Milestones -->
+                <div class="timeline-container">
+                    <p class="timeline-title">// My Journey</p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-badge">🏫</div>
+                            <div class="timeline-panel">
+                                <h4>2021</h4>
+                                <p>Completed Class X at Pinewood School (95%)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">🎓</div>
+                            <div class="timeline-panel">
+                                <h4>2023</h4>
+                                <p>Completed Class XII at St. Mary's School (88%)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">🏛️</div>
+                            <div class="timeline-panel">
+                                <h4>2024 – 2028</h4>
+                                <p>BTech in Computer Science &amp; Engineering (Data Science) at Ajay Kumar Garg Engineering College</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">🧠</div>
+                            <div class="timeline-panel">
+                                <h4>Projects &amp; Hackathons</h4>
+                                <p>Built YOLOv8 Real vs Fake Image Detector, Movie Recommendation System, and Mock AI Interviewer. Member of AKGEC Robotics Club.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item highlight">
+                            <div class="timeline-badge">🎯</div>
+                            <div class="timeline-panel">
+                                <h4>Current Focus</h4>
+                                <p>Seeking Internship Opportunities in Software &amp; Machine Learning domains</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-group">
-                    <p class="skill-category">Domains</p>
-                    <div class="skill-list">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">Web Dev</span>
-                    </div>
-                </div>
+
+                <a href="{% url 'contact' %}" class="btn btn-primary" style="margin-top: 2rem;">Hire me →</a>
             </div>
         </div>
     </div>

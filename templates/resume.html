@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume — Shreya Jain{% endblock %}
+
+{% block content %}
+
+<!-- Print / Action Floating Bar (Hidden when printing) -->
+<div class="resume-actions-bar" data-aos="fade-down">
+    <div class="bar-inner">
+        <a href="{% url 'home' %}" class="btn btn-ghost btn-sm">← Portfolio</a>
+        <div class="bar-right">
+            <button onclick="window.print()" class="btn btn-primary btn-sm">Print / Save PDF 🖨️</button>
+        </div>
+    </div>
+</div>
+
+<section class="page-section resume-page">
+    <div class="section-inner narrow-resume">
+        <article class="resume-paper" data-aos="zoom-in" data-aos-delay="100">
+            <!-- Header -->
+            <header class="resume-header">
+                <h1 class="resume-name">Shreya Jain</h1>
+                <div class="resume-contacts">
+                    <span>📞 +91 9520910904</span>
+                    <span>✉️ <a href="mailto:shreyaja923@gmail.com">shreyaja923@gmail.com</a></span>
+                    <span>🔗 <a href="https://www.linkedin.com/in/shreya-jain-694287343/" target="_blank" rel="noopener noreferrer">linkedin.com/in/shreya-jain-694287343</a></span>
+                    <span>🐙 <a href="https://github.com/shreyaja923-arch" target="_blank" rel="noopener noreferrer">github.com/shreyaja923-arch</a></span>
+                </div>
+            </header>
+
+            <!-- Professional Summary -->
+            <section class="resume-section">
+                <h2 class="resume-section-title">Professional Summary</h2>
+                <div class="resume-section-content">
+                    <p>
+                        Aspiring Software Developer with a strong foundation in Data Structures and Algorithms using C++ and hands-on experience in machine learning with Python libraries. Built a Flutter-based quiz application and currently developing RESTful APIs using Django Rest Framework. Passionate about problem-solving, backend development, and applying machine learning concepts to real-world problems. Seeking internship opportunities in both software development and machine learning domains.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="resume-section">
+                <h2 class="resume-section-title">Education</h2>
+                <div class="resume-section-content education-list">
+                    <div class="education-item">
+                        <div class="edu-header">
+                            <h3>Ajay Kumar Garg Engineering College</h3>
+                            <span class="edu-loc">Ghaziabad, Uttar Pradesh</span>
+                        </div>
+                        <div class="edu-subheader">
+                            <span>Bachelor of Technology in Computer Science and Engineering (Data Science)</span>
+                            <span class="edu-date">2024 – 2028</span>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="edu-header">
+                            <h3>St. Mary’s School</h3>
+                            <span class="edu-loc">Class XII – 88%</span>
+                        </div>
+                        <div class="edu-subheader">
+                            <span>High School Graduation</span>
+                            <span class="edu-date">2023</span>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="edu-header">
+                            <h3>Pinewood School</h3>
+                            <span class="edu-loc">Class X – 95%</span>
+                        </div>
+                        <div class="edu-subheader">
+                            <span>Secondary School Graduation</span>
+                            <span class="edu-date">2021</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="resume-section">
+                <h2 class="resume-section-title">Projects</h2>
+                <div class="resume-section-content project-list">
+                    <div class="resume-project-item">
+                        <div class="proj-header">
+                            <h3>Real vs Fake Image Classifier</h3>
+                            <span class="proj-tech">YOLOv8, Python, Ultralytics</span>
+                        </div>
+                        <ul class="proj-bullet">
+                            <li>Developed an image classification system using YOLOv8 to distinguish between real and fake images.</li>
+                            <li>Implemented transfer learning on a custom dataset to improve model accuracy and efficiency.</li>
+                            <li>Evaluated model performance using confidence-based predictions for reliable classification.</li>
+                            <li>Designed for applications in media authenticity verification and digital forensics.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-project-item">
+                        <div class="proj-header">
+                            <h3>Movie Recommendation System</h3>
+                            <span class="proj-tech">Python, Pandas, NumPy, Scikit-learn, Streamlit</span>
+                        </div>
+                        <ul class="proj-bullet">
+                            <li>Built a recommendation system using machine learning techniques to suggest movies based on user preferences.</li>
+                            <li>Utilized Pandas and NumPy for data preprocessing and Scikit-learn for model development.</li>
+                            <li>Deployed the application using Streamlit and Render for interactive user experience.</li>
+                            <li>Optimized performance using serialized models with Pickle for faster predictions.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-project-item">
+                        <div class="proj-header">
+                            <h3>Multilingual Mock Interview Platform</h3>
+                            <span class="proj-tech">FastAPI, Whisper, Python</span>
+                        </div>
+                        <ul class="proj-bullet">
+                            <li>Developed a multilingual mock interview system supporting 10 Indian languages.</li>
+                            <li>Created a structured question bank with 120+ HR, behavioral, and technical questions.</li>
+                            <li>Integrated Whisper Large-v3 for speech-to-text with automatic language detection.</li>
+                            <li>Built REST APIs using FastAPI and tested endpoints using ngrok for real-time access.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="resume-section">
+                <h2 class="resume-section-title">Technical Skills</h2>
+                <div class="resume-section-content skills-list">
+                    <p><strong>Programming Languages:</strong> C++, Python, C, HTML, CSS</p>
+                    <p><strong>Frameworks &amp; Tools:</strong> Django, Git, GitHub, Visual Studio Code, Google Colab</p>
+                    <p><strong>Libraries:</strong> NumPy, Pandas, OpenCV, Matplotlib</p>
+                    <p><strong>Core Concepts:</strong> Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Machine Learning</p>
+                </div>
+            </section>
+
+            <!-- Achievements -->
+            <section class="resume-section">
+                <h2 class="resume-section-title">Achievements</h2>
+                <div class="resume-section-content">
+                    <ul class="resume-bullets">
+                        <li>Participated in a hackathon at Guru Tegh Bahadur Institute of Technology, gaining experience in collaborative problem-solving and rapid prototyping.</li>
+                        <li>Active member of the Robotics Club at Ajay Kumar Garg Engineering College, engaging in technical projects and innovation-driven activities.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Extracurricular Activities -->
+            <section class="resume-section">
+                <h2 class="resume-section-title">Extracurricular Activities</h2>
+                <div class="resume-section-content">
+                    <ul class="resume-bullets">
+                        <li>Strong communication and public speaking skills, demonstrated through active participation in presentations.</li>
+                        <li>Passionate about photography, with a keen eye for visual storytelling and composition.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </div>
+</section>
+
+{% endblock %}
